@@ -1,0 +1,35 @@
+environment:
+  condition: clear
+  fog_density: 0.0
+  humidity: 50.0
+  rain_intensity: 0.0
+  snow_intensity: 0.0
+  temperature: 20.0
+processing:
+  clustering:
+    eps: 0.5
+    min_samples: 10
+  denoising:
+    enabled: true
+    k_neighbors: 20
+    method: statistical
+  outlier_removal:
+    enabled: true
+    std_dev: 1.5
+sensor:
+  horizontal_fov: 360
+  horizontal_resolution: 360
+  max_range: 100.0
+  min_range: 0.3
+  noise_std: 0.02
+  scan_rate: 10
+  type: velodyne_vlp16
+  vertical_fov:
+  - -15
+  - 15
+  vertical_resolution: 16
+visualization:
+  color_scheme: intensity
+  frame_rate: 10
+  live_view: true
+  save_frames: false
